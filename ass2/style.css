@@ -1,0 +1,189 @@
+:root {
+  --bg: #fdf6e9;
+  --deep: #3e2723;
+  --accent: #d4af37;
+  --muted: #6f625a;
+  --container: 1150px;
+}
+
+/* Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0 }
+html, body { height: 100% }
+body {
+  display: flex; flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background: url("image/alcohol_wine_food_grapes_beverages-77357.jpg!d") no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px }
+
+/* Header */
+header.site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 0;
+}
+.brand { display:flex; align-items:center; gap:12px; text-decoration:none }
+.logo-crest {
+  width:56px; height:56px; border-radius:10px; display:grid; place-items:center;
+  background: linear-gradient(135deg, var(--accent), #7f4a2a);
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+.brand-name { font-family:'Cormorant Garamond', serif; font-size:20px; color:var(--deep); display:block; }
+.brand-sub { font-size:12px; color:var(--muted); display:block; }
+
+nav.main-nav { flex:1; display:flex; justify-content:center; }
+nav.main-nav ul { display:flex; gap:28px; list-style:none; margin:0; padding:0; align-items:center; }
+nav.main-nav a {
+  font-family:'Cormorant Garamond', serif;
+  text-decoration:none;
+  color:#473d39;
+  font-size:15px;
+  padding:6px 4px;
+  transition:.2s;
+}
+nav.main-nav a:hover { color:var(--accent); transform:translateY(-2px); }
+
+.header-actions { display:flex; align-items:center; gap:10px; }
+.icon-btn {
+  display:inline-grid; place-items:center;
+  width:36px; height:36px; border:none; background:transparent; cursor:pointer;
+}
+.icon-btn i { width:22px; height:22px; stroke-width:2.2; }
+.cart-count {
+  background:var(--accent); color:var(--deep);
+  padding:2px 6px; border-radius:999px; margin-left:6px;
+  font-weight:700; font-size:12px;
+}
+
+/* Main overlay (login style) */
+main { flex:1; display:flex; align-items:center; justify-content:center; padding:40px 20px; }
+.overlay {
+  background: rgba(255,255,255,0.9);
+  padding:40px 30px;
+  border-radius:12px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.25);
+  max-width:420px;
+  width:100%;
+  text-align:center;
+}
+/* wider overlay for account page */
+.overlay.wide { max-width:900px; text-align:left; }
+
+.breadcrumb {
+  list-style:none; display:flex; justify-content:center; gap:8px; font-size:13px; margin-bottom:20px;
+}
+.breadcrumb a { text-decoration:none; color:var(--muted); }
+.breadcrumb li::after { content:"›"; margin-left:8px; color:var(--muted); }
+.breadcrumb li:last-child::after { content:"" }
+
+.overlay h1 {
+  font-family:'Cormorant Garamond', serif;
+  font-size:28px;
+  color:var(--deep);
+  margin-bottom:20px;
+}
+
+/* Form (login) */
+.form-group { text-align:left; margin-bottom:18px; }
+.form-group label { display:block; margin-bottom:6px; font-weight:500; color:var(--deep); }
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:6px; font-size:14px;
+}
+.btn-login {
+  width:100%; padding:12px; background:var(--deep); color:#fff; border:none; border-radius:6px;
+  font-weight:600; font-size:15px; cursor:pointer; transition:.2s;
+}
+.btn-login:hover { background:#5a3830; }
+.extra-links { margin-top:18px; font-size:14px; text-align:center; }
+.extra-links a { color:var(--accent); text-decoration:none; }
+
+/* Account page specifics */
+.account-grid { display:grid; grid-template-columns: 1fr 1fr; gap:28px; margin-top:12px; }
+.account-section {
+  background:#fff; border-radius:12px; padding:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.account-section.full-width { grid-column:1 / -1; }
+
+.profile-box { display:flex; align-items:center; gap:16px; }
+.profile-box .avatar { width:90px; height:90px; border-radius:50%; object-fit:cover; }
+
+.order-table { width:100%; border-collapse:collapse; margin-top:12px; font-size:14px; }
+.order-table th, .order-table td { padding:10px; border-bottom:1px solid #eee; text-align:left; }
+.order-table th { background:#f9f5ef; font-weight:600; color:var(--deep); }
+.status-delivered { color:green; font-weight:600; }
+.status-processing { color:orange; font-weight:600; }
+.status-cancelled { color:red; font-weight:600; }
+
+/* Logout button */
+.logout-btn {
+  padding:10px 18px; background:var(--deep); color:#fff; border:none; border-radius:6px; cursor:pointer;
+  font-weight:600; text-decoration:none; display:inline-block;
+}
+.logout-btn:hover { background:var(--accent); color:var(--deep); }
+
+/* Footer (match login file style) */
+footer.site-footer {
+  background: var(--bg);
+  padding: 30px 0;
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 36px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer-top h4 {
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px;
+  margin-bottom:12px;
+  color:var(--deep);
+}
+.footer-top ul { list-style:none; padding:0; margin:0; }
+.footer-top li { margin:8px 0; }
+.footer-top a { color:#392f2b; text-decoration:none; font-size:14px; }
+.footer-top a:hover { color:var(--accent); }
+
+.footer-bottom {
+  max-width: var(--container);
+  margin: 20px auto 0;
+  padding: 0 24px;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.socials { display:flex; align-items:center; gap:14px; }
+.socials i { width:20px; height:20px; stroke-width:2; }
+
+/* Responsive */
+@media (max-width: 880px) {
+  nav.main-nav ul { gap:16px; font-size:14px; }
+  .overlay { padding:30px; }
+  .overlay.wide { max-width:700px; }
+  .account-grid { grid-template-columns:1fr; }
+}
+@media (max-width: 480px) {
+  .header-row { gap:10px; padding:12px 0; }
+  .logo-crest { width:48px; height:48px; }
+  nav.main-nav { display:none; } /* keep header compact on very small screens */
+}

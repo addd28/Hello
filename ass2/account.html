@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MDQ Wine — My Account</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="login.html">
+        <div class="logo-crest">
+          <svg viewBox="0 0 64 64" width="42" height="42"><rect width="64" height="64" rx="8" fill="#2e1712"/><text x="50%" y="55%" font-family="Cormorant Garamond, serif" font-size="22" fill="#fff" text-anchor="middle">MDQ</text></svg>
+        </div>
+        <div><span class="brand-name">MDQ Wine</span><span class="brand-sub">Selected premium wines</span></div>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Our Wines</a></li>
+          <li><a href="#">Tour & Tasting</a></li>
+          <li><a href="#">Restaurant</a></li>
+          <li><a href="#">Store Location</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" title="Search"><i data-lucide="search"></i></button>
+        <button class="icon-btn" title="Account"><i data-lucide="user"></i></button>
+        <button class="icon-btn" title="Cart"><i data-lucide="shopping-cart"></i><span class="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="overlay wide">
+      <ul class="breadcrumb"><li><a href="#">Home</a></li><li><a href="#">Account</a></li><li>My Account</li></ul>
+
+      <h1>My Account</h1>
+
+      <div class="account-grid">
+        <div class="account-section">
+          <h3>Profile Information</h3>
+          <div class="profile-box">
+            <img src="image/3-29-1.jpg" alt="Avatar" class="avatar">
+            <div>
+              <p><strong>Huan Rose</strong></p>
+              <p>Email: huan.rose@example.com</p>
+              <p>Phone: +1 234 567 890</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="account-section">
+          <h3>Shipping Address</h3>
+          <p>58 A, East Madison Street<br>Baltimore, MD, USA</p>
+          <p>Phone: 0000 - 123 - 456789</p>
+        </div>
+
+        <div class="account-section full-width">
+          <h3>Order History</h3>
+          <table class="order-table">
+            <thead>
+              <tr><th>Order ID</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>#1001</td><td>2025-08-21</td><td>Red Wine Classic (x2)</td><td>$120.00</td><td class="status-delivered">Delivered</td></tr>
+              <tr><td>#1002</td><td>2025-09-02</td><td>White Wine Premium (x1)</td><td>$75.00</td><td class="status-processing">Processing</td></tr>
+              <tr><td>#1003</td><td>2025-09-15</td><td>Sparkling Wine (x3)</td><td>$210.00</td><td class="status-cancelled">Cancelled</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:16px; text-align:right;">
+            <a href="login.html" class="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div><h4>Help</h4><ul><li><a href="#">Search</a></li><li><a href="#">Help</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Shipping Details</a></li></ul></div>
+      <div><h4>Information</h4><ul><li><a href="#">Orders & Returns</a></li><li><a href="#">Store Location</a></li></ul></div>
+      <div><h4>Contact Us</h4><ul><li>No: 58 A, East Madison Street, Baltimore, MD, USA</li><li>Phone: 0000 - 123 - 456789</li><li>Email: <a href="mailto:mail@example.com">mail@example.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="socials"><a href="#"><i data-lucide="facebook"></i></a><a href="#"><i data-lucide="instagram"></i></a><a href="#"><i data-lucide="twitter"></i></a></div><div>&copy; 2025 MDQ Wine</div></div>
+  </footer>
+
+  <script>lucide.createIcons()</script>
+</body>
+</html>
